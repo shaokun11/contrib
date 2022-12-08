@@ -226,6 +226,9 @@ func paginateLimit(first, last *int) int {
 	} else if last != nil {
 		limit = *last+1
 	}
+	if limit > 100 {
+	   limit = 100
+	}
 	return limit
 }
 
